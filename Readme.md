@@ -51,6 +51,25 @@ cd spring-practice and type
 1. For Build **mvn package**
 2. For Run **java -jar target/spring-practice-0.0.1-SNAPSHOT.jar**
 Tomcat is running on port 8080
-3. localhost:8080  -> You get a 404 error page saying whitelabel error page, since you don't have any index.html and error page
+3. localhost:8080  -> You get a 404 error page saying whitelabel error page, since you don't have any index.html and error page (/error)
 
 
+In src/main/java/com/gautham/spring/springpractice > SpringPracticeApplication.java - Name given based on our artifact name
+
+It has 2 imports - SpringApplication, SpringBootApplication
+The annotation @SpringBootApplication tells the Application context to use this as a base for component scanning and auto-configuration
+because it is @SpringBoot and not just @Configuration
+
+In src/main/resources we have static and templates folders. These are generated because of Spring web dependency (package).
+All the configuration of the Application context goes into application.properties file
+
+mvnw and mvnw.cmd are present so that if maven is not installed in your machine, it will download it for you.
+
+## pom.xml
+It contains important details about the application like spring boot version, name of application, artifact, description, dependencies, plugins,...
+
+External libraries shows the list of all the dependency libraries like logging (log4j, logback), json documentation (jackson core), testing (jsonpath),
+J2EE(jakarta), embedded tomcat, unit testing (junit5) ...
+
+# Create index.html
+In src/main/resources/static create index.html file
